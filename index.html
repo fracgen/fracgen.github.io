@@ -427,31 +427,28 @@
     }
     /* --- Paper-page template (ported from the reference project page) --- */
     body {
-      background-color: #f2f2f2;
+      background-color: #fff;
     }
 
-    .page-card {
+    /* one rounded card per section, as in the reference template */
+    section.hero,
+    section.section {
       max-width: 1100px;
       margin: 25px auto;
       padding: 25px 50px;
       background-color: #fff;
       box-shadow: 0 0 10px #999;
       border-radius: 15px;
-      overflow: hidden;
-    }
-
-    section.hero {
-      background: #fff;
       border-bottom: none;
+      background-image: none;
     }
 
     section.hero .hero-body {
-      padding-top: 2rem;
+      padding: 1rem 0 0;
     }
 
-    /* the card provides the alternating-band contrast, so drop the tinted sections */
     section.section:nth-of-type(2n) {
-      background-color: transparent;
+      background-color: #fff;
     }
 
     .paper-title strong {
@@ -517,7 +514,8 @@
     }
 
     @media screen and (max-width: 900px) {
-      .page-card {
+      section.hero,
+      section.section {
         margin: 12px;
         padding: 18px 20px;
         border-radius: 12px;
@@ -531,7 +529,6 @@
   </style>
 </head>
 <body>
-<div class="page-card">
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -545,7 +542,17 @@
             <br><br>
             <span class="affiliation">Johns Hopkins University</span>
           </p>
-          <div style="margin-top: 2rem;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <div>
             <div class="teaser-video-block">
               <h2 class="title is-3">Controllable Fracture Generation</h2>
               <div class="teaser-motion-grid is-2">
@@ -559,6 +566,17 @@
                 </div>
               </div>
             </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <div>
             <h2 class="title is-3">Dynamic Physics Map and Fracture Video Generation</h2>
             <p class="media-label">Pick Intact Objects</p>
             <div class="teaser-frame-panel" aria-label="Select object">
@@ -611,7 +629,6 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
@@ -843,7 +860,6 @@
     </div>
   </div>
 </footer>
-</div>
 
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
