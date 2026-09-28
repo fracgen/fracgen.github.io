@@ -526,6 +526,53 @@
       #authors .affiliation { font-size: 20px; }
       .title.is-3 { font-size: 24px !important; }
     }
+
+    /* --- link pills at the foot of the header card --- */
+    .paper-links {
+      text-align: center;
+      margin: 2rem 0 0.5rem;
+    }
+
+    .paper-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55em;
+      margin: 0.4em 0.55em;
+      padding: 0.5em 1.35em;
+      font-size: 20px;
+      line-height: 1.4;
+      color: #fff !important;
+      background-color: #000;
+      border-radius: 999px;
+      text-decoration: none !important;
+      transition: background-color 0.2s ease;
+    }
+
+    .paper-btn:hover {
+      background-color: #333;
+    }
+
+    .paper-btn svg {
+      width: 1em;
+      height: 1em;
+      flex: none;
+    }
+
+    .paper-btn-quote {
+      font-size: 1.7em;
+      line-height: 0;
+      position: relative;
+      top: 0.3em;
+      font-weight: 700;
+    }
+
+    @media screen and (max-width: 900px) {
+      .paper-btn {
+        font-size: 16px;
+        margin: 0.3em 0.3em;
+        padding: 0.45em 1.1em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -555,6 +602,22 @@
                   <video autoplay muted loop playsinline><source src="./results/teaser/delay_fracture.mp4" type="video/mp4"></video>
                 </div>
               </div>
+            </div>
+
+            <!-- TODO: replace the placeholder hrefs below with the real URLs -->
+            <div class="paper-links">
+              <a class="paper-btn" href="#" role="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span>Paper</span>
+              </a>
+              <a class="paper-btn" href="#" role="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span>Code (Official)</span>
+              </a>
+              <a class="paper-btn" href="#" role="button">
+                <span class="paper-btn-quote" aria-hidden="true">&rdquo;</span>
+                <span>BibTex</span>
+              </a>
             </div>
           </div>
         </div>
