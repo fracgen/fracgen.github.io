@@ -444,7 +444,7 @@
     }
 
     section.hero .hero-body {
-      padding: 1rem 0 0;
+      padding: 0.25rem 0 0;
     }
 
     section.section:nth-of-type(2n) {
@@ -459,17 +459,22 @@
       text-align: center;
       font-size: 42px;
       font-weight: 700;
-      line-height: 1.3;
+      line-height: 1.25;
       color: #000;
-      margin: 0.4em auto 0.6em;
+      margin: 0.15em auto 0.4em;
       max-width: 24em;
     }
 
     #authors {
       text-align: center;
       font-size: 24px;
-      margin-bottom: 20px;
-      line-height: 1.5;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    #authors .affiliation {
+      display: inline-block;
+      margin-top: 0.35em;
     }
 
     #authors a {
@@ -530,7 +535,7 @@
     /* --- link pills at the foot of the header card (matches the reference site) --- */
     .paper-links {
       text-align: center;
-      margin: 1.5rem 0 0.25rem;
+      margin: 0.9rem 0 0;
     }
 
     .paper-btn {
@@ -570,7 +575,12 @@
     }
 
     .teaser-video-block {
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.9rem;
+    }
+
+    /* tighter heading rhythm inside the opening card */
+    section.hero .title.is-3 {
+      margin-bottom: 0.8rem !important;
     }
 
     @media screen and (max-width: 900px) {
@@ -592,7 +602,7 @@
             <a class="hover-underline-animation-blue" href="https://nttung1110.github.io/" target="_blank" rel="noopener">Trong-Tung Nguyen</a>
             <a class="hover-underline-animation-blue" href="https://me.jiahanzhang.top/" target="_blank" rel="noopener">Jianhan Zhang</a>
             <a class="hover-underline-animation-blue" href="https://anandbhattad.github.io/" target="_blank" rel="noopener">Anand Bhattad</a>
-            <br><br>
+            <br>
             <span class="affiliation">Johns Hopkins University</span>
           </p>
           <div style="margin-top: 2rem;">
