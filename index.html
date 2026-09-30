@@ -595,6 +595,22 @@
         margin: 0.25em 0.3em;
       }
     }
+
+    .paper-description {
+      max-width: 860px;
+      margin: 1.2rem auto 0;
+      text-align: justify;
+      font-size: 19px;
+      line-height: 1.6;
+      color: #1a1a1a;
+    }
+
+    @media screen and (max-width: 900px) {
+      .paper-description {
+        font-size: 16px;
+        text-align: left;
+      }
+    }
   </style>
 </head>
 <body>
@@ -625,6 +641,8 @@
                 </div>
               </div>
             </div>
+
+            <p class="paper-description">We introduce FracGen, a fracture-aware video generation model that produces plausible, controllable fracture dynamics from a single image of an intact object, conditioned on physics signals. To train FracGen, we build FracSim, a fracture-aware simulation framework that augments material point method (MPM) simulation with a continuum damage model, producing paired fracture videos and dense, pixel-aligned physical fields at no additional cost beyond standard rendering. FracGen leverages these maps in two ways: it is trained to jointly predict them alongside RGB video, encouraging the model to capture physical state rather than surface appearance; and it is supervised with physics-informed losses that encourage consistency among the predicted maps. As a result, FracGen captures distinct material-specific fracture behavior without expensive test-time simulation or per-scene tuning, while offering fine-grained control over where an object tears, how fast the crack propagates, and how much deformation precedes failure. We further introduce a benchmark for evaluating the physical plausibility of generated fracture video, and show through extensive experiments that FracGen outperforms existing video generation baselines in both physical and visual fidelity.</p>
 
             <!-- TODO: replace the placeholder hrefs below with the real URLs -->
             <!-- icons: Font Awesome Free 6 (CC BY 4.0), paths inlined so the page makes no third-party requests -->
